@@ -60,7 +60,6 @@ export default function Home() {
     socket.on("connect_error", (error) => {
       if (socket.active) {
         // temporary failure, the socket will automatically try to reconnect
-        // setState("Connected");
         setState("Reconnecting");
       } else {
         // the connection was denied by the server
